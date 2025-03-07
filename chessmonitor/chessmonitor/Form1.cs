@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 
 namespace chessmonitor
 {
@@ -15,6 +16,12 @@ namespace chessmonitor
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ChessBoard cb = new ChessBoard();
+            richTextBox1.Text = cb.DisplayBoard();
         }
     }
 }
